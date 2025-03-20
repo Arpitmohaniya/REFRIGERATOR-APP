@@ -1,0 +1,9 @@
+<h1>All Refrigerators</h1>
+<a href="/refrigerators/new">Create New Refrigerator</a>
+<ul>
+    <% refrigerators.forEach(fridge => { %>
+        <li>
+            <a href="/refrigerators/<%= fridge._id %>"><%= fridge.brand %></a> - $<%= fridge.price %>
+        </li>
+    <% }); %>
+</ul>

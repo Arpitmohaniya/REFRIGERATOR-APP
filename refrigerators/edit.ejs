@@ -1,0 +1,19 @@
+<h1>Edit Refrigerator</h1>
+<form action="/refrigerators/<%= refrigerator._id %>/update" method="POST">
+    <label>Brand (Cannot be changed):</label>
+    <input type="text" name="brand" value="<%= refrigerator.brand %>" readonly>
+
+    <label>Price:</label>
+    <input type="number" name="price" value="<%= refrigerator.price %>" required>
+
+    <label>Image URL:</label>
+    <input type="text" name="image" value="<%= refrigerator.image %>" required>
+
+    <label>Description:</label>
+    <textarea name="desc" required><%= refrigerator.desc %></textarea>
+
+    <label>Door Type:</label>
+    <input type="text" name="door" value="<%= refrigerator.door %>" required>
+
+    <button type="submit">Update</button>
+</form>

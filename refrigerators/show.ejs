@@ -1,0 +1,12 @@
+<h1><%= refrigerator.brand %></h1>
+<img src="<%= refrigerator.image %>" alt="Refrigerator Image" width="300">
+<p>Price: $<%= refrigerator.price %></p>
+<p>Description: <%= refrigerator.desc %></p>
+<p>Door Type: <%= refrigerator.door %></p>
+
+<a href="/refrigerators">Back to List</a>
+<a href="/refrigerators/<%= refrigerator._id %>/edit">Edit</a>
+
+<form action="/refrigerators/<%= refrigerator._id %>/delete" method="POST">
+    <button type="submit">Delete</button>
+</form>
